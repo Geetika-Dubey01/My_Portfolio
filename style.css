@@ -716,3 +716,50 @@ nav a:hover{color:#38bdf8}
   }
 
 }
+/* ========================= */
+/* NAVBAR RESPONSIVE FIX */
+/* ========================= */
+
+/* DEFAULT = Laptop View */
+
+#nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+#hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+}
+
+
+
