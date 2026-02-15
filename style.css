@@ -472,3 +472,206 @@ nav a:hover{color:#38bdf8}
   }
 
 }
+/* ============================= */
+/* NAVBAR BASE */
+/* ============================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #020617;
+  position: sticky;
+  top: 0;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #38bdf8;
+  border-radius: 5px;
+}
+
+/* ============================= */
+/* MOBILE DESIGN */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 20px 6%;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #020617;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    border-radius: 12px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* HERO MOBILE */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 6%;
+    gap: 30px;
+  }
+
+  .hero img {
+    width: 180px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 85%;
+  }
+
+  .contact-links,
+  .project-links,
+  .certificate-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+/* ========================================= */
+/* 📱 MOBILE RESPONSIVE – ALL OTHER PAGES */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+  /* ===== ABOUT PAGE ===== */
+
+  .about-section {
+    padding: 50px 6%;
+    text-align: center;
+  }
+
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .skills {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .skills span {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  /* ===== PROJECT PAGE ===== */
+
+  .projects {
+    padding: 50px 6%;
+  }
+
+  .card {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .project-links a {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* ===== CONTACT PAGE ===== */
+
+  .contact-section {
+    padding: 50px 6%;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-links a {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* ===== CERTIFICATES ===== */
+
+  .certificate-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .certificate-links a {
+    width: 90%;
+    text-align: center;
+  }
+
+}
