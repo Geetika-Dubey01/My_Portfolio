@@ -89,7 +89,7 @@ nav a:hover{color:#38bdf8}
   color: #38bdf8;
   margin-bottom: 30px;
   font-size: 2rem;
-}
+} */
 
 /* LINKS COMMON */
 .contact-links,
@@ -129,3 +129,131 @@ nav a:hover{color:#38bdf8}
   transform: translateY(-5px);
 }
  
+/* ========================= */
+/*  Mobile Devices (up to 600px) */
+/* ========================= */
+@media (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  .hero img {
+    width: 180px;
+    margin-top: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .content,
+  .projects {
+    padding: 50px 5%;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .skills {
+    text-align: center;
+  }
+
+  .contact-links,
+  .project-links,
+  .certificate-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-links a,
+  .project-links a,
+  .certificate-links a {
+    width: 90%;
+  }
+}
+
+
+/* ========================= */
+/* 📲 Tablets (601px to 992px) */
+/* ========================= */
+@media (min-width: 601px) and (max-width: 992px) {
+
+  nav {
+    padding: 20px 6%;
+  }
+
+  .hero {
+    padding: 60px 6%;
+    gap: 30px;
+  }
+
+  .hero img {
+    width: 220px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .content,
+  .projects {
+    padding: 60px 6%;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .contact-links,
+  .project-links,
+  .certificate-links {
+    gap: 20px;
+  }
+}
+
+
+/* ========================= */
+/* 💻 Large Screens (1200px+) */
+/* ========================= */
+@media (min-width: 1200px) {
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero img {
+    width: 300px;
+  }
+
+  .content,
+  .projects {
+    padding: 100px 12%;
+  }
+}
