@@ -385,3 +385,90 @@ nav a:hover{color:#38bdf8}
     gap: 20px;
   }
 }
+
+/* ================================================= */
+/* 📱 MOBILE ONLY RESPONSIVE DESIGN (SAFE VERSION) */
+/* ================================================= */
+
+@media screen and (max-width: 768px) {
+
+  /* NAVBAR */
+  nav {
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+
+  nav ul li {
+    margin-left: 10px;
+  }
+
+  /* HERO SECTION (FRONT PAGE) */
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 50px 5%;
+    gap: 25px;
+  }
+
+  .hero img {
+    width: 170px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  /* GENERAL CONTENT SPACING */
+  .content,
+  .projects,
+  .contact-section {
+    padding: 50px 5%;
+  }
+
+  /* BUTTON GROUP */
+  .btn-group {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .btn {
+    width: 85%;
+    text-align: center;
+  }
+
+  /* PROJECT / CONTACT / CERTIFICATE LINKS */
+  .contact-links,
+  .project-links,
+  .certificate-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-links a,
+  .project-links a,
+  .certificate-links a {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* CARDS */
+  .card {
+    padding: 20px;
+  }
+
+  /* SKILLS SECTION */
+  .skills {
+    text-align: center;
+  }
+
+  .skills span {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+
+}
