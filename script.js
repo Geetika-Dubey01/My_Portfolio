@@ -6,4 +6,6 @@ document.querySelectorAll('.skills span').forEach(skill => {
   });
 });
 
-
+function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('active');
+}
