@@ -9,3 +9,32 @@ document.querySelectorAll('.skills span').forEach(skill => {
 function toggleMenu() {
   document.getElementById('nav-links').classList.toggle('active');
 }
+
+// Hamburger toggle
+function toggleMenu() {
+  const navLinks = document.getElementById("nav-links");
+  navLinks.classList.toggle("active");
+
+  // Optional: Close menu when clicking outside
+  document.addEventListener("click", function(event) {
+    if (!navLinks.contains(event.target) && !event.target.closest(".hamburger")) {
+      navLinks.classList.remove("active");
+    }
+  });
+}
+
+// ===============================
+// Make Project Cards Clickable
+// ===============================
+    document.addEventListener('DOMContentLoaded', () => {
+  // Make Project Cards Clickable
+  document.querySelectorAll('.projects .card').forEach(card => {
+    const link = card.getAttribute('data-link');
+    if (link) {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        window.open(link, '_blank'); // opens project in new tab
+      });
+    }
+  });
+});

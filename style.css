@@ -854,24 +854,6 @@ body{background:#0f172a;color:#e5e7eb}
   color: #020617;
   transform: translateY(-5px);
 }
-
-/* ===== DESKTOP: 2 per row ===== */
-@media (min-width: 769px) {
-  .contact-links a,
-  .project-links a,
-  .certificate-links a {
-    width: calc(50% - 10px); /* 2 items per row */
-    text-align: left;
-    white-space: nowrap;
-  }
-
-  /* Certificates row 2 center */
-  .certificate-links a:nth-child(3) {
-    width: 100%;
-    text-align: center;
-  }
-}
-
 /* ===== MOBILE: stacked ===== */
 @media (max-width: 768px) {
   #nav-links {
@@ -901,16 +883,6 @@ body{background:#0f172a;color:#e5e7eb}
   }
 }
 /* ================= LINKS LAYOUT ================= */
-.contact-links,
-.project-links,
-.certificate-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-  justify-content: flex-start; /* desktop left-align, change to center if you want center */
-}
-
 .contact-links a,
 .project-links a,
 .certificate-links a {
@@ -958,7 +930,254 @@ body{background:#0f172a;color:#e5e7eb}
   }
 }
 
+/* =================== MOBILE: max-width 768px =================== */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 20px 5%;
+  }
+  #nav-links {
+    width: 180px;
+  }
 
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+    gap: 25px;
+  }
+  .hero img {
+    width: 150px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Skills Badges */
+  .skills span {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  /* Button group */
+  .btn-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .btn {
+    width: 90%;
+    max-width: 220px;
+  }
+
+  /* Content / Projects / Contact / Certificates */
+  .content,
+  .projects,
+  .contact-section,
+  .certificate-links {
+    padding: 40px 5%;
+  }
+
+  .contact-links a,
+  .project-links a,
+  .certificate-links a {
+    width: 90%;
+  }
+}
+
+/* =================== TABLET: 769px – 1024px =================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    padding: 60px 6%;
+    gap: 30px;
+  }
+  .hero img {
+    width: 200px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Projects Section */
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns for tablet */
+    gap: 20px;
+  }
+
+  /* Contact / Certificates buttons */
+  .contact-links a,
+  .project-links a,
+  .certificate-links a {
+    width: 45%;
+    text-align: center;
+  }
+}
+
+/* =================== VERY SMALL PHONES (<360px) =================== */
+@media (max-width: 360px) {
+  .hero img {
+    width: 130px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .skills span {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .btn {
+    width: 95%;
+    max-width: 200px;
+  }
+}
+
+.card h3 a {
+  color: white;
+  text-decoration: none;
+}
+
+.card h3 a:hover {
+  color: #38bdf8;
+}
+
+.certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.certificates a {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  width: fit-content;
+  min-width: 250px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.certificates a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  nav {
+    padding: 15px 5%;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111827;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  /* Cards */
+  .card {
+    width: 90%;
+    margin: auto;
+  }
+
+  /* Certificates */
+  .certificates a {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  width: fit-content;   /* 👈 Important */
+  min-width: 260px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+
+  /* Section Padding */
+  section {
+    padding: 40px 5%;
+  }
+
+  /* Font Sizes */
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .certificates a {
+    width: 80%;
+  }
+}
+.contact-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+
+.certificate-links {
+  display: block !important;
+  text-align: center !important;
+}
+
+.certificate-links a {
+  display: block !important;
+  width: 280px !important;
+  margin: 15px auto !important;
+  background: rgba(255,255,255,0.08) !important;
+  padding: 15px 20px !important;
+  border-radius: 12px !important;
+  text-decoration: none !important;
+  color: white !important;
+}
+.certificate-links a {
+  width: 90% !important;
+  max-width: 400px !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+}
 
 
 
