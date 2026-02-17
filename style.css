@@ -1179,6 +1179,60 @@ img {
   word-wrap: break-word !important;
 }
 
+@media (max-width: 768px) {
+
+  .projects {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .project-card {
+    width: 95% !important;
+    margin: 15px 0 !important;
+  }
+
+}
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #1e1e1e;
+    width: 200px;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+}
+.hamburger {
+  display: none;
+}
+@media (max-width: 768px) {
+
+  .projects {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+}
+
+
 
 
 

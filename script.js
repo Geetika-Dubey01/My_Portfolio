@@ -38,3 +38,16 @@ function toggleMenu() {
     }
   });
 });
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
+function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  nav.classList.toggle("active");
+}
+
