@@ -192,9 +192,6 @@ body{background:#0f172a;color:#e5e7eb}
   .certificate-links a {
     width: 90%;
   }
-
-
-
 /* ========================= */
 /*  Tablets (601px to 992px) */
 /* ========================= */
@@ -232,8 +229,6 @@ body{background:#0f172a;color:#e5e7eb}
     gap: 20px;
   }
 }
-
-
 /* ========================= */
 /* Large Screens (1200px+) */
 /* ========================= */
@@ -328,9 +323,6 @@ body{background:#0f172a;color:#e5e7eb}
     width: 85%;
   }
 }
-
-
-
 /* ================================= */
 /* 📲 Small Tablets (769px – 1024px) */
 /* ================================= */
@@ -461,31 +453,7 @@ body{background:#0f172a;color:#e5e7eb}
   display: none;
   cursor: pointer;
   font-size: 24px;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-
-  .nav-links {
-    display: none;   /* IMPORTANT */
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #020617;
-    width: 200px;
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
+} 
 
 .hamburger span {
   width: 25px;
@@ -692,8 +660,6 @@ body{background:#0f172a;color:#e5e7eb}
     text-align: center;
   }
 }
-
-
 /* Navbar base */
 .navbar {
   background-color: #2c2c2c;
@@ -822,8 +788,6 @@ body{background:#0f172a;color:#e5e7eb}
   border-radius: 2px;
   transition: all 0.3s;
 }
-
-
 /* ================= LINKS LAYOUT ================= */
 .contact-links,
 .project-links,
@@ -1228,6 +1192,56 @@ body {
   .projects {
     display: grid !important;
     grid-template-columns: 1fr !important;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home img {
+    margin-bottom: 20px;
+  }
+
+}
+/* ===== HERO LAYOUT ===== */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+}
+
+/* Text side */
+.hero-text {
+  flex: 1;
+}
+
+/* Image side */
+.hero img {
+  flex: 1;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero img {
+    margin-bottom: 20px;
   }
 
 }
